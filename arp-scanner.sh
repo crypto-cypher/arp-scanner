@@ -1,6 +1,10 @@
 #!/bin/bash
 # A simple bash script to scan common networks with ARP requests to steal a found internal IP address, if DHCP does not automatically assign one.
-# Only works on wired connections - must be connected to network via Ethernet, even if no IP is assigned, not 
+# Only works on wired connections - must be connected to network via Ethernet, even if no IP is assigned, not for wireless
+# Startup script on Linux systems
+
+# Sleep for 30 seconds before executing, this way DHCP client has time to try to do it's thang
+sleep 30
 
 # Variables - modify wired_int for your system's interface requiring an IP address
 wired_int="eth0"
