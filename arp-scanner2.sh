@@ -12,7 +12,7 @@ if [[ $wireless_ip =~ $verify_ip; then
 else
       	echo "Interface has no IP address, DHCP is probably not working"
 
-	      # Create log file
+	# Create log file
        	sudo touch slog.txt
 
         # Bandwidth decreased from default value to prevent ARP packet loss for optimal results, but slower
@@ -33,6 +33,6 @@ else
        	sudo arp-scan --arpspa $fake_ip -g -B $bandwidth --interface=$wired_int 10.0.2.0/24 |grep -P '^\d+(\.\d+){3}\s'|tee -a slog.txt
        	sudo arp-scan --arpspa $fake_ip -g -B $bandwidth --interface=$wired_int 10.0.10.0/24 |grep -P '^\d+(\.\d+){3}\s'|tee -a slog.txt
 
-	      # Set static IP to X.X.X.250. Uses last network found in log file because scanned results are appended to slog.txt
-	      sudo ifconfig $wired_int $(tail -1 slog.txt | cut -d"." -f1,2,3).250/24 up
+	# Set static IP to X.X.X.250. Uses last network found in log file because scanned results are appended to slog.txt
+	sudo ifconfig $wired_int $(tail -1 slog.txt | cut -d"." -f1,2,3).250/24 up
 fi
