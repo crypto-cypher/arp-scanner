@@ -9,3 +9,5 @@ To-do:
 * Add capability for stealing IP or MAC... or both
 * Check for binary
 * Default help() function
+
+This isn't to be considered a "finished" product.
