@@ -9,5 +9,6 @@ To-do:
 * Add capability for stealing IP or MAC... or both
 * Check for binary
 * Default help() function
+* Put into container with arp-scan
 
-This isn't to be considered a "finished" product.
+This isn't to be considered a "finished" product. I've been lazy with this & lost a bunch of code.
