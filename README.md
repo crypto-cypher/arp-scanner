@@ -1,4 +1,7 @@
 # arp-scanner
+
+NOTE: this doesn't work & I lost a bunch of code at some points. sorry, not sorry.
+
 A simple bash script to scan common networks with ARP requests to steal a found internal IP address, if DHCP does not automatically assign one on startup.
 
 Dependent on [arp-scan](https://github.com/royhills/arp-scan), which discovers IP:MAC:VENDOR for us.
